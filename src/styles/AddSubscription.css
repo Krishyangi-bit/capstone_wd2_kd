@@ -1,0 +1,134 @@
+/* Add Subscription Page Styles */
+
+.add-subscription-page {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-sm);
+}
+
+.page-header p {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Add Subscription Container */
+.add-subscription-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+.form-wrapper {
+  grid-column: 1;
+}
+
+.form-tips {
+  grid-column: 2;
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--border);
+  height: fit-content;
+  position: sticky;
+  top: var(--spacing-2xl);
+}
+
+.form-tips h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-lg);
+}
+
+.form-tips ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-tips li {
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+}
+
+.form-tips li:last-child {
+  border-bottom: none;
+}
+
+/* Success Message */
+.success-message {
+  background-color: rgba(56, 161, 105, 0.2);
+  border: 2px solid var(--color-green);
+  color: var(--color-green);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-lg);
+  font-weight: 600;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .add-subscription-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-wrapper {
+    grid-column: 1;
+  }
+
+  .form-tips {
+    grid-column: 1;
+    position: static;
+    margin-bottom: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .form-tips {
+    padding: var(--spacing-md);
+  }
+
+  .form-tips h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .form-tips li {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-sm) 0;
+  }
+}

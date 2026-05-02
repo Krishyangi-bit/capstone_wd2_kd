@@ -1,0 +1,30 @@
+/* Footer Component Styles */
+
+.footer {
+  background-color: var(--bg-secondary);
+  border-top: 2px solid var(--border);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content p {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  margin: var(--spacing-xs) 0;
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  .footer-content p {
+    font-size: var(--font-size-xs);
+  }
+}
