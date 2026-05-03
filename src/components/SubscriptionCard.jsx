@@ -41,12 +41,12 @@ export function SubscriptionCard({ subscription, onEdit, onDelete, onStatusChang
           <span className="price-label">
             {subscription.billingCycle === 'monthly' ? 'Monthly' : 'Yearly'}
           </span>
-          <span className="price-value">${subscription.price.toFixed(2)}</span>
+          <span className="price-value">₹{subscription.price.toFixed(2)}</span>
         </div>
         {subscription.billingCycle === 'yearly' && (
           <div className="price-item">
             <span className="price-label">Per Month</span>
-            <span className="price-value">${(subscription.price / 12).toFixed(2)}</span>
+            <span className="price-value">₹{(subscription.price / 12).toFixed(2)}</span>
           </div>
         )}
       </div>
