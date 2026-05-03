@@ -121,15 +121,15 @@ export function SubscriptionForm({ onSubmit, initialData = null, isLoading = fal
       <div className="form-row">
         {/* Price */}
         <div className="form-group">
-          <label htmlFor="price">Price ($) *</label>
+          <label htmlFor="price">Price (₹) *</label>
           <input
             type="number"
             id="price"
             name="price"
             value={formData.price}
             onChange={handleChange}
-            placeholder="0.00"
-            step="0.01"
+            placeholder="0"
+            step="1"
             min="0"
             disabled={isLoading}
           />

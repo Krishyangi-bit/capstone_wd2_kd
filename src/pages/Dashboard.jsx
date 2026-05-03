@@ -52,7 +52,7 @@ export default function Dashboard() {
     .reduce((sum, sub) => {
       const monthlyPrice = sub.billingCycle === 'yearly' ? sub.price / 12 : sub.price;
       return sum + monthlyPrice;
-    }, 0);
+    }, 0); 
 
   // Get upcoming renewals (next 30 days)
   const getUpcomingRenewals = () => {
@@ -94,8 +94,8 @@ export default function Dashboard() {
         <StatCard
           icon="💰"
           title="Monthly Spending"
-          value={totalMonthlySpending.toFixed(2)}
-          unit="USD"
+          value={totalMonthlySpending.toFixed(0)}
+          unit="₹"
           color="purple"
         />
         <StatCard
@@ -118,7 +118,7 @@ export default function Dashboard() {
                   <p>Renewal: {new Date(sub.renewalDate).toLocaleDateString()}</p>
                 </div>
                 <div className="renewal-price">
-                  ${sub.billingCycle === 'yearly' ? (sub.price / 12).toFixed(2) : sub.price.toFixed(2)}/month
+                  ₹{sub.billingCycle === 'yearly' ? (sub.price / 12).toFixed(0) : sub.price.toFixed(0)}/month
                 </div>
               </div>
             ))}

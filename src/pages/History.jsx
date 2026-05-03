@@ -115,7 +115,7 @@ export default function History() {
 
             <div className="analytics-card">
               <h3>💵 Average Price</h3>
-              <p className="analytics-value">${analytics.averagePrice.toFixed(2)}</p>
+              <p className="analytics-value">₹{analytics.averagePrice.toFixed(0)}</p>
             </div>
 
             <div className="analytics-card">
@@ -123,7 +123,7 @@ export default function History() {
               {analytics.mostExpensive ? (
                 <>
                   <p className="analytics-label">{analytics.mostExpensive.name}</p>
-                  <p className="analytics-value">${analytics.mostExpensive.price.toFixed(2)}</p>
+                  <p className="analytics-value">₹{analytics.mostExpensive.price.toFixed(0)}</p>
                 </>
               ) : (
                 <p className="analytics-value">-</p>
@@ -135,7 +135,7 @@ export default function History() {
               {analytics.cheapest ? (
                 <>
                   <p className="analytics-label">{analytics.cheapest.name}</p>
-                  <p className="analytics-value">${analytics.cheapest.price.toFixed(2)}</p>
+                  <p className="analytics-value">₹{analytics.cheapest.price.toFixed(0)}</p>
                 </>
               ) : (
                 <p className="analytics-value">-</p>
@@ -174,7 +174,7 @@ export default function History() {
                       Added: {new Date(sub.createdAt).toLocaleDateString()}
                     </p>
                     <p className="timeline-details">
-                      {sub.category} • ${sub.price.toFixed(2)} {sub.billingCycle === 'yearly' ? '/year' : '/month'}
+                      {sub.category} • ₹{sub.price.toFixed(0)} {sub.billingCycle === 'yearly' ? '/year' : '/month'}
                     </p>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ export default function History() {
                   <span className="spending-category">
                     {getCategoryIcon(category)} {category}
                   </span>
-                  <span className="spending-amount">${total.toFixed(2)}</span>
+                  <span className="spending-amount">₹{total.toFixed(0)}</span>
                 </div>
               ))}
             </div>
