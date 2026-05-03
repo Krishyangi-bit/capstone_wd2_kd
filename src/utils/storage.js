@@ -55,8 +55,3 @@ export function deleteSubscription(id) {
   return true;
 }
 
-// Get activity/history - get all subscriptions sorted by date
-export function getActivityHistory() {
-  const subscriptions = getAllSubscriptions();
-  return subscriptions.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-}

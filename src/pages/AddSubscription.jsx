@@ -56,16 +56,6 @@ export default function AddSubscription() {
             isLoading={isLoading}
           />
         </div>
-
-        <div className="form-tips">
-          <h3>💡 Tips</h3>
-          <ul>
-            <li>Use the exact subscription name for easy tracking</li>
-            <li>Select the category that best matches your subscription</li>
-            <li>Enter the renewal date to get timely reminders</li>
-            <li>You can edit or delete subscriptions anytime</li>
-          </ul>
-        </div>
       </div>
     </div>
   );

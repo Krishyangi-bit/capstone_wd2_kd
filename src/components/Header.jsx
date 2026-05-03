@@ -21,7 +21,6 @@ export function Header() {
           <Link to="/" className="nav-link">Dashboard</Link>
           <Link to="/add" className="nav-link">Add Subscription</Link>
           <Link to="/manage" className="nav-link">Manage</Link>
-          <Link to="/history" className="nav-link">History</Link>
         </nav>
 
         {/* Theme Toggle Button */}

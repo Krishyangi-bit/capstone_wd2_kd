@@ -40,41 +40,6 @@
   grid-column: 1;
 }
 
-.form-tips {
-  grid-column: 2;
-  background-color: var(--bg-secondary);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-lg);
-  border: 2px solid var(--border);
-  height: fit-content;
-  position: sticky;
-  top: var(--spacing-2xl);
-}
-
-.form-tips h3 {
-  margin-top: 0;
-  margin-bottom: var(--spacing-md);
-  font-size: var(--font-size-lg);
-}
-
-.form-tips ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.form-tips li {
-  padding: var(--spacing-md) 0;
-  border-bottom: 1px solid var(--border);
-  color: var(--text-secondary);
-  font-size: var(--font-size-sm);
-  line-height: 1.6;
-}
-
-.form-tips li:last-child {
-  border-bottom: none;
-}
-
 /* Success Message */
 .success-message {
   background-color: rgba(56, 161, 105, 0.2);

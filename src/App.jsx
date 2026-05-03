@@ -6,7 +6,6 @@ import { Footer } from './components/Footer';
 import Dashboard from './pages/Dashboard';
 import AddSubscription from './pages/AddSubscription';
 import ManageSubscriptions from './pages/ManageSubscriptions';
-import History from './pages/History';
 import './styles/App.css';
 
 // Inner App component (uses theme context)
@@ -21,7 +20,6 @@ function AppContent() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/add" element={<AddSubscription />} />
           <Route path="/manage" element={<ManageSubscriptions />} />
-          <Route path="/history" element={<History />} />
         </Routes>
       </main>
       <Footer />
