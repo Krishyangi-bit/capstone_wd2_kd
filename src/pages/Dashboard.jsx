@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { StatCard } from '../components/StatCard';
@@ -41,7 +42,7 @@ export default function Dashboard() {
   const handleEdit = (subscription) => {
     // Store subscription in session storage for editing
     sessionStorage.setItem('editSubscription', JSON.stringify(subscription));
-    window.location.href = '/manage';
+    navigate('/manage');
   };
 
   // Calculate statistics
